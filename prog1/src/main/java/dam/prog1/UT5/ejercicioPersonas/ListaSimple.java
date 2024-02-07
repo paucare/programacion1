@@ -11,9 +11,9 @@ public class ListaSimple implements Lista {
 
 	}
 
-	@Override // Hecha
+	@Override
 	public boolean isEmpty() {
-		return tam == 0;
+		return tam == 0; //expresión booleana que devuelve true si se cumple la condición
 	}
 
 	@Override
