@@ -1,8 +1,8 @@
-package dam1.tema4;
+package dam.prog1.UT4.ejercicios1601;
 
 import java.util.Scanner;
 
-public class Ejercicio1Tema4 {
+public class Ejercicio1 {
 
 	public static void main(String[] args) {
 
@@ -22,7 +22,7 @@ public class Ejercicio1Tema4 {
 
 		int contador = 0;
 		int[] datos = new int[20];
-		// System.out.println(numAleatorio);
+		// System.out.println(numAleatorio); variable de control
 		for (int i = 0; i < datos.length; i++) {
 			int numAleatorio = (int) (Math.random() * 31 + 20);
 			datos[i] = numAleatorio;
@@ -31,16 +31,8 @@ public class Ejercicio1Tema4 {
 		}
 		Scanner sc = new Scanner(System.in);
 		
-		
 		System.out.println("\n Dame el numero a buscar: ");
 		int numAbuscar = sc.nextInt();
-		/*
-		for (int i = 0; i < datos.length; i++) {
-			if (datos[i] == numAbuscar) {
-				contador++;
-			}
-		}
-		*/
 		//for each
 		for(int contenido:datos) {
 			if (contenido==numAbuscar) {
@@ -49,6 +41,6 @@ public class Ejercicio1Tema4 {
 		}
 		System.out.println("El numero se ha encontrado " + contador + " veces");
 
-		// leer.close();
+		sc.close();
 	}
 }

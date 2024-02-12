@@ -1,7 +1,8 @@
-package dam1.tema4;
+package dam.prog1.UT4;
 
 public class MainEjercicioAlumno {
 	public static void main(String[]args) {
+		
 	AlumnoController gestor = new AlumnoController();
 	
 	//gestor.printAlumnos();

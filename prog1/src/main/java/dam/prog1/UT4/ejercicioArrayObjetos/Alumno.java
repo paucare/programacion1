@@ -1,4 +1,4 @@
-package dam.prog1.UT4;
+package dam.prog1.UT4.ejercicioArrayObjetos;
 public class Alumno {
 		
 		private String nombre;

@@ -1,4 +1,4 @@
-package dam1.tema4;
+package dam.prog1.UT4;
 
 public class AlumnoController {
 	
@@ -6,10 +6,10 @@ public class AlumnoController {
 	private Alumno[] arrayAlumnos;
 	
 	//constructor
-	
 	public AlumnoController() {
 		this.arrayAlumnos = new Alumno [TAM_ARRAY];
 	}
+	
 	public void addAlumnos(Alumno al) {
 		int index=0; //es un contador
 		while(arrayAlumnos[index]!=null) {
@@ -26,7 +26,7 @@ public class AlumnoController {
 		//for(int i=0; i<arrayAlumnos.length; i++) {
 		for(int i=0; i<TAM_ARRAY; i++) {
 			//---
-			if(arrayAlumnos[i]!=null);{
+			if(arrayAlumnos[i]!=null){
 			System.out.println(arrayAlumnos[i].getNombre()+ " " + arrayAlumnos[i].getEdad());
 		} 
 		
