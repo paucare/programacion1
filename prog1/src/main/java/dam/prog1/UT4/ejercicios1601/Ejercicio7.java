@@ -1,4 +1,4 @@
-package ejercicios1601;
+package dam.prog1.UT4.ejercicios1601;
 import java.util.Random;
 /*
  * Dado un array de 50 números entre 1 y 100, aleatorios, 

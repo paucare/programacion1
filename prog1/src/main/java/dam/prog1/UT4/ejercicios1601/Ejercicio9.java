@@ -1,4 +1,4 @@
-package ejercicios1601;
+package dam.prog1.UT4.ejercicios1601;
 
 public class Ejercicio9 {
 	public static void main(String[] args) {

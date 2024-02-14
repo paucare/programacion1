@@ -1,4 +1,4 @@
-package ejercicios1601;
+package dam.prog1.UT4.ejercicios1601;
 
 /**
  * Desarrolla un programa que ordene los índices de un array de enteros, 
