@@ -1,4 +1,4 @@
-package ejercicio1;
+package dam.prog1.UT3.ejercicio1;
 import java.util.Scanner;
 
 public class Ejercicio1CuentaBancaria {

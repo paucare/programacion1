@@ -1,4 +1,4 @@
-package nuevoPaquete;
+package dam.prog1.UT3.nuevoPaquete;
 
 public class Personas {
 	

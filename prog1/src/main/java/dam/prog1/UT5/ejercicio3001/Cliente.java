@@ -1,4 +1,4 @@
-package programacion.dam1.UT5.ejercicio3001;
+package dam.prog1.UT5.ejercicio3001;
 
 public class Cliente {
 	private String nombre; 
@@ -34,14 +34,14 @@ public class Cliente {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [nombre=" + nombre + ", numCuenta=" + numCuenta + ", saldo=" + saldo + "]";
+	}
 	
 	//Generar ToString, HashCode, Equals
 	
-	@Override 
-	public String toString(){
-		return "Cliente [Nombre: " + nombre]
-		
-	}
-	
+
 	
 }

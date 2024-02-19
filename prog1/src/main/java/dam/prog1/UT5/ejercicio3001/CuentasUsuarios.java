@@ -1,4 +1,4 @@
-package programacion.dam1.UT5.ejercicio3001;
+package dam.prog1.UT5.ejercicio3001;
 import java.util.*;
 
 public class CuentasUsuarios {

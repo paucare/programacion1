@@ -1,4 +1,4 @@
-package ejercicio1;
+package dam.prog1.UT3.ejercicio1;
 
 public class ejemploMetodo {
 	/*

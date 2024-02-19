@@ -1,4 +1,4 @@
-package dam1.tema2;
+package dam.prog1.UT3.introduccion;
 
 	public class Personas {
 		// nombre, edad , estatura
