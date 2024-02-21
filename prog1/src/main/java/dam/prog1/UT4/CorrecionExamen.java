@@ -7,12 +7,23 @@ public class CorrecionExamen {
 	private static final int DIM_COL = 10;
 
 	public static void main(String[] args) {
+		
 		int[][] matriz = ejercicio1();
 		System.out.println(" ");
+		
 		int[] array = ejercicio2(matriz);
 		System.out.println(" ");
+		
 		ejercicio3(matriz, array);
+		System.out.println(" ");
+		
+		ejercicio4();
+		System.out.println(" ");
+		
+		ejercicioExtra(array);
 	}
+	
+	//Faltaría implementar un metodo para mostrar array con un mensaje
 
 	private static int[][] ejercicio1() {
 		System.out.println("Ejercicio 1");
@@ -40,6 +51,7 @@ public class CorrecionExamen {
 			}
 			System.out.println();
 		}
+		
 		return matriz;
 	}
 
@@ -104,7 +116,7 @@ public class CorrecionExamen {
 		return subArray;
 	}
 
-	private static int ejercicio4() {
+	private static void ejercicio4() {
 		System.out.println("Ejercicio 4");
 		Random rand = new Random();
 		int[][] matriz;
@@ -123,20 +135,64 @@ public class CorrecionExamen {
 		}
 		for (int f = 0; f < matriz.length; f++) {
 			for (int c = 0; c < matriz[0].length; c++) {
-			System.out.println(matriz[f][c] + " ");
+				System.out.print(matriz[f][c] + " ");
+			}
+			System.out.println();
+		}
+
+		// Intercambio
+
+		/*
+		 * for(int c=0;c<columnas;c++) { int aux=matriz[0][0];
+		 * matriz[0][0]=matriz[0][1]; matriz[0][1]=aux; }
+		 */
+		// Lo mismo con un array
+		int[] array = matriz[0];
+		matriz[0] = matriz[1];
+		matriz[1] = array;
+
+		// Impresión de matriz intercambiada
+		System.out.println();
+		System.out.println("Matriz intercambiada");
+		for (int f = 0; f < matriz.length; f++) {
+			for (int c = 0; c < matriz[0].length; c++) {
+				System.out.print(matriz[f][c] + " ");
 			}
 			System.out.println();
 		}
 		
-		for(int c=0;c<columnas;c++) {
-			int aux=matriz[0][0];
-			matriz[0][0]=matriz[0][1];
-			matriz[0][1]=aux;
+		sc.close();
+	}
+
+	private static int[] ejercicioExtra(int[] arr) {
+		System.out.println("Ejercicio 5");
+
+		// Copiamos el array en otro nuevo (para trastear)
+		int[] arrCopia = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			arrCopia[i] = arr[i];
 		}
-		//Falta mensaje de matriz nueva intercambiada
 
-		return 0;
+		int indiceActual = 0;
+		int[] arrayOrdenado = new int[arr.length];
+		while (indiceActual < arrCopia.length) {
+			int indiceMenor = 0;
 
+			for (int i = 1; i < arrCopia.length; i++) {
+				if (arrCopia[i] < arrCopia[indiceMenor]) {
+					indiceMenor = i;
+				}
+			}
+			
+			arrayOrdenado[indiceActual] = arrCopia[indiceMenor];
+			arrCopia[indiceMenor] = Integer.MAX_VALUE;
+	
+			indiceActual++;
+		}
+		
+		//Aqui falta llamar al metodo mostrarArrat y primero
+		//se muestra el ordenado y luego el original
+		return arrayOrdenado;
 	}
 
 }

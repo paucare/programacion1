@@ -5,10 +5,12 @@ public class ListaHermanaTorpe implements Lista {
 	private Nodo primero;
 	// No tiene tamaño
 
-	// No tiene contador de tamaño ni esta refactorizada
+	// No tiene contador de tamaño ni esta factorizada
 
 	private static void main(String[] args) {
+		
 		Lista lista = new ListaHermanaTorpe();
+		
 		//Tema 3 compatibilidad entre tipos java;
 	}
 
