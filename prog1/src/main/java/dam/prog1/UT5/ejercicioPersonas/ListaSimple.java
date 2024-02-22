@@ -13,7 +13,7 @@ public class ListaSimple implements Lista {
 
 	@Override
 	public boolean isEmpty() {
-		return tam == 0; //expresión booleana que devuelve true si se cumple la condición
+		return tam == 0; // expresión booleana que devuelve true si se cumple la condición
 	}
 
 	@Override
@@ -91,9 +91,31 @@ public class ListaSimple implements Lista {
 				anterior.setSig(nuevo);
 				nuevo.setSig(aux);
 				tam++;
-
 			}
 		}
+	}
+
+	public void insertAtPosition2(Persona info, int index) {
+		// opciones
+		// inserto al ppio
+		// inserto en una posición
+		if (index >= 0 && index <= tam) {
+			Nodo nuevo = new Nodo(info);
+			Nodo aux = primero;
+			if (index == 0) {
+				nuevo.setSig(primero);
+				primero = nuevo;
+			} else {
+
+				for (int i = 1; i < index; i++) {
+					aux = aux.getSig();
+				}
+				nuevo.setSig(aux.getSig());
+				aux.setSig(nuevo);
+			}
+			tam++;
+		}
+
 	}
 
 	@Override
@@ -106,10 +128,10 @@ public class ListaSimple implements Lista {
 			while (aux != null) {
 				if (aux.getInfo().equals(info)) {
 					return true;
-				} 
+				}
 				aux = aux.getSig();
 			}
-			
+
 		}
 		return false;
 	}
@@ -117,38 +139,40 @@ public class ListaSimple implements Lista {
 	@Override
 	public Persona getElementAt(int index) {
 		Nodo aux = primero;
-		if(index >= tam || index <0) {
+		if (index >= tam || index < 0) {
 			return null;
-		}else {
-			for(int i=0; i < index;i++) {
-				aux=aux.getSig();
+		} else {
+			for (int i = 0; i < index; i++) {
+				aux = aux.getSig();
 			}
 		}
-		return aux!=null ? aux.getInfo() : null;
+		return aux != null ? aux.getInfo() : null;
 	}
 
 	@Override
 	public boolean removeByInfo(Persona info) {
-		
+
 		return false;
 	}
 
 	@Override
 	public Persona removeAt(int index) {
 		
+			
+		
+
 		return null;
 	}
 
 	@Override
 	public void print() {
-		
 
 	}
 
 	@Override
-	public boolean clearList() {
-		
-		return false;
+	public boolean clearList() { // version hiper simplificado
+			primero = null;
+			return isEmpty();
 	}
 
 	@Override

@@ -84,7 +84,7 @@ public class ListaHermanaTorpe implements Lista {
 
 	@Override
 	public Persona removeAt(int index) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
@@ -96,14 +96,35 @@ public class ListaHermanaTorpe implements Lista {
 
 	@Override
 	public boolean clearList() {
-		// TODO Auto-generated method stub
-		return false;
+		if(!isEmpty()) {
+			System.out.println("Borrado...");
+			while(size() != 0) {
+				removeAt(0); // va borrando el primero 
+				System.out.println("Fin del borrado");
+				
+			}
+		}
+		return isEmpty();
+	}
+	public boolean clearList2() {
+		if(isEmpty()) { // CASO BASE --> LISTA VACÍA
+			return true;
+		}
+		removeAt(0); // ELIMINO EL PRIMERO DE LA LISTA 
+		return clearList2();
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		int contador =0;
+		Nodo aux= primero;
+		// recorrido de toda la lista
+		while(aux!=null) {
+			contador++;
+			aux=aux.getSig();
+		}
+		
+		return contador;
 	}
 
 }
