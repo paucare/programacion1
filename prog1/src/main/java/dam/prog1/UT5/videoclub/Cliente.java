@@ -4,19 +4,18 @@ public class Cliente {
 	
 	private static int cont_id=1;
 	
-	int numerocarnet;
+	String numerocarnet;
 	String nombre;
 	
 	public Cliente(String nombre) {
-		numerocarnet = cont_id++;
 		this.nombre=nombre;	
 	}
 
-	public int getNumerocarnet() {
+	public String getNumerocarnet() {
 		return numerocarnet;
 	}
 
-	public void setNumerocarnet(int numerocarnet) {
+	public void setNumerocarnet(String numerocarnet) {
 		this.numerocarnet = numerocarnet;
 	}
 

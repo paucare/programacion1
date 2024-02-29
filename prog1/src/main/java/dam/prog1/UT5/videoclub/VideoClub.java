@@ -5,15 +5,39 @@ import java.util.Collection;
 
 public class VideoClub {
 	
-	Collection<Cliente> listaCliente = new ArrayList<>();
-	Collection <Pelicula> listaPelicula;
-	Collection <Prestamo> listaPrestamo;
+	private Collection<Cliente> listaCliente;
+	private ArrayList <Pelicula> listaPelicula;
+	private Collection <Prestamo> listaPrestamo;
 	
-	public VideoClub(ArrayList<Cliente> listaCliente, ArrayList<Pelicula> listaPelicula,
-			ArrayList<Prestamo> listaPrestamo) {
-		this.listaCliente = listaCliente;
-		this.listaPelicula = listaPelicula;
-		this.listaPrestamo = listaPrestamo;
+	public VideoClub() {
+		this.listaCliente = listaCliente = new ArrayList<>();;
+		this.listaPelicula = listaPelicula = new ArrayList<>();;
+		this.listaPrestamo = listaPrestamo = new ArrayList<>();;
+	}
+	
+	public boolean addCliente2(Cliente cli) {
+		boolean dentroLista=false;
+		for(Cliente item : listaCliente) {
+			if(item.getNumerocarnet().equals(cli.getNumerocarnet())){
+				dentroLista = true;
+				break;
+			}
+			if(!dentroLista) {
+				listaCliente.add(cli);
+			}
+		}
+	}
+	
+	public Pelicula buscarPelicula(String cod) {
+		Pelicula peli = null;
+		
+		for(int i=0;i<listaPelicula.size();i++) {
+			if(listaPelicula.get(i).getCodigo().equals(cod)){
+				peli=listaPelicula.get(i);
+				break
+			}
+				return peli; 
+			}
 	}
 
 	/*
