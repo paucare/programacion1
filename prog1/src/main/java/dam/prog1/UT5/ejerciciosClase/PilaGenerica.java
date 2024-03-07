@@ -1,10 +1,10 @@
 package dam.prog1.UT5.ejerciciosClase;
 
-public class Pila {
+public class PilaGenerica<T> {
 	
 		// la vamos hacer estricta para un objeto
 		 
-		private Nodo cima;
+		private NodoGenerico<T> cima;
 		private int tam;
 	 
 		public int size() {
@@ -16,9 +16,9 @@ public class Pila {
 		}
 	 
 		// este le usamos para meter en la pila
-		public void push(Integer info) {
+		public void push(T info) {
 	 
-			Nodo nuevo = new Nodo(info);
+			NodoGenerico<T> nuevo = new NodoGenerico<T>(info);
 	 
 			if (isEmpty()) {
 	 
@@ -35,29 +35,29 @@ public class Pila {
 		
 		// esto es para sacar de la pila
 		 
-		public Integer pop() {
+		public T pop() {
 	 
 			if (isEmpty()) {
 				return null;
 			} else {
 	 
 				// acabamos de crear el nodo para almacenar lo que voy a borrar
-				Nodo borrar = cima;
+				NodoGenerico<T> borrar = cima;
 	 
 				// estamos indicando que la nueva cima es el siguiente a cima
 	 
 				cima = cima.getSig();
 	 
 			}
-			return tam;
+			return null;
 		}
 	 
 		// sacamos si no esta vacia la lista
-		public Integer pop2() {
+		public T pop2() {
 	 
 			if (!isEmpty()) {
 				// acabamos de crear el nodo para almacenar lo que voy a borrar
-				Nodo borrar = cima;
+				NodoGenerico<T> borrar = cima;
 	 
 				// estamos indicando que la nueva cima es el siguiente a cima
 	 
@@ -71,7 +71,7 @@ public class Pila {
 	 
 			return null;
 		}
-		public Integer peak () {
+		public T peak () {
 			
 			if (!isEmpty()) {
 				return cima.getInfo();
@@ -82,7 +82,7 @@ public class Pila {
 			System.out.println("la pila contiene:");
 			if(!isEmpty()) {
 				
-				Nodo aux = cima;
+				NodoGenerico<T> aux = cima;
 				System.out.println("......cima.....");
 				System.out.println("---------------");
 				while (aux.getSig()!=null) {
