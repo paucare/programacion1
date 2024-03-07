@@ -89,4 +89,9 @@ public class Cola<T> {
 		}
 		
 	}
+	
+	printElemento (Nodo<T> nodo){
+		
+		print 
+	}
 }
