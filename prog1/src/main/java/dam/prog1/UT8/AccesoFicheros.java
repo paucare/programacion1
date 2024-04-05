@@ -1,6 +1,7 @@
 package dam.prog1.UT8;
 
 import java.io.*;
+import java.util.*;
 
 public class AccesoFicheros {
 
@@ -10,7 +11,7 @@ public class AccesoFicheros {
 
 		LeerFicheros accediendo = new LeerFicheros();
 
-		accediendo.lee();
+		//accediendo.lee();
 		
 		EscribirFicheros escribiendo = new EscribirFicheros();
 		escribiendo.escribir();
@@ -24,7 +25,7 @@ class LeerFicheros {
 
 		try {
 
-			FileReader entrada = new FileReader("D:/Users/10184/Desktop/ejemplo.txt");
+			FileReader entrada = new FileReader("D:/Users/10184/Desktop/EjerciciosFicheros/ejemplo.txt");
 
 			int c = 0;
 
@@ -51,11 +52,19 @@ class EscribirFicheros {
 
 	public void escribir() {
 		try {
-			FileWriter salida = new FileWriter("D:/Users/10184/Desktop/ejemplo.txt", true);
-		
-			char[] c;
-			salida.write(c);
+			
+			FileWriter salida = new FileWriter("D:/Users/10184/Desktop/EjerciciosFicheros/ejemplo.txt", true);
+			Scanner sc = new Scanner(System.in);
 				
+			String input="";
+			while(!input.equals("-1")) {
+				System.out.println("Escribe...");
+				input = sc.nextLine();
+				salida.write(input + "\n");
+			}
+			salida.close();
+			sc.close();
+			
 		} catch (IOException e) {
 			System.out.println("El fichero no se ha encontrado");
 		}
