@@ -8,10 +8,10 @@ public class Planta implements Serializable {
 	private int codigo;
 	private String nombreVulgar;
 	private String nombreCientifico;
-	private String precio;
+	private double precio;
 	private int cantidad;
 	
-	public Planta(int codigo, String nombreVulgar, String nombreCientifico, String precio, int cantidad) {
+	public Planta(int codigo, String nombreVulgar, String nombreCientifico, double precio, int cantidad) {
 		this.codigo = codigo;
 		this.nombreVulgar = nombreVulgar;
 		this.nombreCientifico = nombreCientifico;
