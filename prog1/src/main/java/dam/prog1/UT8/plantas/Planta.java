@@ -5,6 +5,13 @@ import java.util.Objects;
 
 public class Planta implements Serializable {
 	
+	
+	/**
+	 * 
+	 */
+	
+	private static final long serialVersionUID = 6068714457088521079L;
+	
 	private int codigo;
 	private String nombreVulgar;
 	private String nombreCientifico;
@@ -43,11 +50,11 @@ public class Planta implements Serializable {
 		this.nombreCientifico = nombreCientifico;
 	}
 
-	public String getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(String precio) {
+	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 

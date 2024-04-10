@@ -2,6 +2,8 @@ package dam.prog1.UT8.plantas;
 
 import java.io.*;
 import java.nio.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class CrearFicheroPlantas {
 
@@ -36,12 +38,12 @@ public class CrearFicheroPlantas {
 
 }
 		 */
-		try {
-			OutputStream os = Files.newOutputStream(file); // También se puede poner dentro del OutputStream
+		try 
+			(OutputStream os = Files.newOutputStream(file); // También se puede poner dentro del OutputStream
 															// C:/Users/Fouad/Desktop/plantas.bin
 			
-			ObjectOutputStream oos = new ObjectOutputStream(os);
-
+			ObjectOutputStream oos = new ObjectOutputStream(os);)
+			{
 			System.out.println("Comienzo a escribir el fichero...");
 			oos.writeObject(new Planta(1, "Camelia", "Camellia japonica", 9.95, 28));
 			oos.writeObject(new Planta(2, "Mimosa", "Acacia dealbata", 9.95, 16));
