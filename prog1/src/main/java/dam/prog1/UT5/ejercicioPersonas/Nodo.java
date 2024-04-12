@@ -5,8 +5,6 @@ public class Nodo {
 		private Persona info;
 		private Nodo sig;
 		
-		
-		
 		public Nodo(Persona info) {
 			this.info = info;
 		}

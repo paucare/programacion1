@@ -17,6 +17,7 @@ public class Persona {
 	 * @param p2 Persona 2
 	 * @return la persona mayor o null en caso de no recibir alguna de las personas
 	 */
+	
 	public static Persona mayor(Persona p1, Persona p2) {
 		if(p1 != null && p2 != null) {			
 			return p1.getEdad() > p2.getEdad() ? p1 : p2;
@@ -36,6 +37,7 @@ public class Persona {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	
 	@Override
 	public String toString() {
 		return nombre + " tiene " + edad + " años";

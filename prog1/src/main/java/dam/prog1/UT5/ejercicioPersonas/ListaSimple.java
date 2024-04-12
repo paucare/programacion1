@@ -5,38 +5,51 @@ public class ListaSimple implements Lista {
 	private Nodo primero;
 	private int tam;
 
-	public static void main(String[] args) {
-
-		Lista lista = new ListaSimple();
+	public ListaSimple() {
+		
+		primero = null;
+		
+		tam = 0;
 
 	}
 
+	
 	@Override
 	public boolean isEmpty() {
+		
 		return tam == 0; // expresión booleana que devuelve true si se cumple la condición
 	}
+	
 
 	@Override
 	public Persona getFirst() {
-		Persona person = null;
+		
+		Persona persona = null;
 
 		if (!isEmpty()) {
-			person = primero.getInfo();
+			persona = primero.getInfo();
 		}
-		return person;
+		return persona;
 
 	}
 
 	@Override
 	public Persona getLast() {
+		
 		Persona person = null;
+		
 		if (!isEmpty()) { // entonces recorro la lista hasta el ultimo
+			
 			Nodo aux = primero;
+			
 			while (aux.getSig() != null) {
-				aux = (aux.getSig());
+				
+				aux = aux.getSig();
 			}
-			return aux.getInfo();
+			
+			person = aux.getInfo();
 		}
+		
 		return person;
 	}
 
