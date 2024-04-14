@@ -1,13 +1,13 @@
 package dam.prog1.UT5.listaGenericos;
 
-public class ListaSimple implements Lista {
+public class ListaSimple implements ListaRepository {
 
 	private Nodo<T> primero;
 	private int tam;
 
 	public static void main(String[] args) {
 
-		Lista lista = new ListaSimple();
+		ListaRepository lista = new ListaSimple();
 
 	}
 

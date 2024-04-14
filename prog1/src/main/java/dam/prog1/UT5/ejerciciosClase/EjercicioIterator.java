@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class EjercicioIterator {
 	public static void main(String[] args) {
+		
 		int n;
 		Integer numero; // auxiliar para avanzar en el arrayList con los valores que tiene;
 		Scanner sc = new Scanner(System.in);
@@ -23,7 +24,9 @@ public class EjercicioIterator {
 		}
 		//Recorrido b
 		System.out.println("Recorro con iterator indicandole el tipo de objeto");
+		
 		Iterator<Integer> itr = arrListEnteros.iterator();
+		
 		while(itr.hasNext()) {
 			//numero = itr.next();
 			System.out.println(itr.next());

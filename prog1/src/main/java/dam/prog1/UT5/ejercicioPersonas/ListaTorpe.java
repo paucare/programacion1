@@ -1,6 +1,6 @@
 package dam.prog1.UT5.ejercicioPersonas;
 
-public class ListaHermanaTorpe implements Lista {
+public class ListaTorpe implements ListaRepository {
 
 	private Nodo primero;
 	// No tiene tamaño
@@ -9,12 +9,12 @@ public class ListaHermanaTorpe implements Lista {
 
 	private static void main(String[] args) {
 		
-		Lista lista = new ListaHermanaTorpe();
+		ListaRepository lista = new ListaTorpe();
 		
 		//Tema 3 compatibilidad entre tipos java;
 	}
 
-	public ListaHermanaTorpe(Nodo primero) {
+	public ListaTorpe(Nodo primero) {
 		this.primero = primero;
 	}
 

@@ -8,6 +8,7 @@ public class Nodo {
 		public Nodo(Persona info) {
 			this.info = info;
 		}
+		
 		public Persona getInfo() {
 			return info;
 		}
