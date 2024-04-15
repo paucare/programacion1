@@ -74,7 +74,6 @@ public class Lista implements ListaRepository {
 			primero = nuevo;
 		} else {
 			Nodo aux = primero;
-			aux = primero.getSig();
 			while (aux.getSig() != null) {
 				aux = aux.getSig(); // Recorrer la lista
 			}
@@ -278,6 +277,16 @@ public class Lista implements ListaRepository {
 
 	@Override
 	public void print() {
+		if(isEmpty()) {
+			System.out.println("La lista esta vacia");
+		} else {
+			Nodo aux = primero;
+			
+			while(aux!=null) {
+				System.out.println(aux.getInfo());
+				aux=aux.getSig();
+			}
+		}
 
 	}
 
@@ -285,6 +294,38 @@ public class Lista implements ListaRepository {
 	public boolean clearList() { // version hiper simplificado
 		primero = null;
 		return isEmpty();
+		
+	}
+	
+	public boolean clearList2() {
+		if(isEmpty()) {
+			return true;
+		}
+		removeAt(0);
+		return clearList2();
+	}
+	
+	public boolean clearList3() { // version mia (no se si funciona)
+		
+		if(isEmpty()) {
+			
+			return true;
+			
+		}else {
+		
+		Nodo aux = primero.getSig();
+		primero=null;
+		Nodo borrar= aux.getSig();
+		
+		while(borrar!=null) {
+			aux.setSig(null);
+			borrar=borrar.getSig();
+			aux=borrar;
+		}
+		
+		return true;
+		}
+		
 	}
 
 	@Override
