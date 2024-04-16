@@ -11,10 +11,7 @@ public class CrearFicheroPlantas {
 	private static final String RUTA = "D:/Users/10184/Desktop/";
 
 	public static void main(String[] args) {
-
-		Crear creando = new Crear();
-		creando.escrituraLectura();
-
+		
 		Path file = Paths.get(RUTA + "plantas.bin");
 		
 		try (OutputStream os = Files.newOutputStream(file); 
@@ -36,31 +33,6 @@ public class CrearFicheroPlantas {
 		} catch (Exception e) {
 			System.out.println(e);
 			e.printStackTrace(); // Imprimir la pila de errores que se ha ido acumulando
-		}
-	}
-
-	static class Crear {
-		Planta planta = new Planta(0, null, null, 0, 0);
-
-		public void escrituraLectura() {
-			try {
-				// Flujo de salida
-				ObjectOutputStream escribiendo_fichero = new ObjectOutputStream(
-						new FileOutputStream("RUTA" + "plantas.bin"));
-				escribiendo_fichero.writeObject(planta);
-				escribiendo_fichero.close();
-
-				// Flujo de entrada
-				ObjectInputStream recuperando_fichero = new ObjectInputStream(
-						new FileInputStream("RUTA" + "plantas.bin"));
-				Planta planta_recuperada = (Planta) recuperando_fichero.readObject(); // Casting
-				recuperando_fichero.close();
-
-				// Esto solo sirve para cuando estemos en una colección o un array
-
-			} catch (Exception e) {
-				System.out.println(e);
-			}
 		}
 	}
 }
