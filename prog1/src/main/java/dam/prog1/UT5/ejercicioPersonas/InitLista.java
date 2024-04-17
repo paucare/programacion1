@@ -26,9 +26,11 @@ public class InitLista {
 		
 		System.out.println();
 		
-		lista.clearList2();
+		lista.clearList3();
 		
+		System.out.println(lista.size());
 		System.out.println(lista.isEmpty());
+		
 
 	}
 

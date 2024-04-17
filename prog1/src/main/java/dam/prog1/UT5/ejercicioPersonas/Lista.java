@@ -305,22 +305,22 @@ public class Lista implements ListaRepository {
 		return clearList2();
 	}
 	
-	public boolean clearList3() { // version mia (no se si funciona)
+	public boolean clearList3() { // version mia
 		
 		if(isEmpty()) {
 			
 			return true;
 			
 		}else {
-		
-		Nodo aux = primero.getSig();
-		primero=null;
+		//Revisar esta parte del metodo me borra todos menos uno
+		Nodo aux = primero;
 		Nodo borrar= aux.getSig();
 		
 		while(borrar!=null) {
-			aux.setSig(null);
 			borrar=borrar.getSig();
+			aux.setSig(null);
 			aux=borrar;
+			tam--;
 		}
 		
 		return true;
