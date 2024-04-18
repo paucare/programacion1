@@ -10,8 +10,6 @@ import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.imageio.IIOException;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class Init {
 
