@@ -1,4 +1,4 @@
-package dam.prog1.UT8.ejercicios.cancionPirata;
+package dam.prog1.UT8.ejercicios;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 
-public class Main {
+public class CancionPirata {
 
 	private static final String RUTA = "D:/Users/10184/Desktop/";
 
