@@ -9,7 +9,7 @@ public class CopiaDe {
 
 	static Scanner sc = new Scanner(System.in);
 
-	private static final String RUTA = "C:/Users/bepol/Desktop/";
+	private static final String RUTA = "D:/Users/10184/Desktop/";
 
 	public static void main(String[] args) {
 
