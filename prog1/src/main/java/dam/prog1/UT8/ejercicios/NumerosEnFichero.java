@@ -27,10 +27,13 @@ public class NumerosEnFichero {
 
 			while (!inputEnds) {
 				int number = sc.nextInt();
+				
 				if (number == -1) {
 					inputEnds = true;
 				} else {
+					if(number>=0) {
 				file.write(number);
+					}
 				}
 			}
 
@@ -38,12 +41,12 @@ public class NumerosEnFichero {
 			System.out.println("Error de E/S");
 			e.printStackTrace();
 		}
-		showAndCopy();
+		Copy();
 		System.out.println("Se ha copiado el fichero");
 
 	}
 
-	private static void showAndCopy() {
+	private static void Copy() {
 		try (FileInputStream readFile = new FileInputStream(RUTA + "numeros.dat");
 				FileOutputStream copyFile = new FileOutputStream(RUTA + "numerosCopia.dat");) {
 
@@ -58,8 +61,8 @@ public class NumerosEnFichero {
 				if (inputByte == -1) {
 					fileEnds = true;
 				} else {
-					copyFile.write(inputByte);
 					System.out.println(inputByte);
+					copyFile.write(inputByte);
 				}
 			}
 		} catch (IOException e) {

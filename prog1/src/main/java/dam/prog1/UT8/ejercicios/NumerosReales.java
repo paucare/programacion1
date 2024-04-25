@@ -1,8 +1,9 @@
 package dam.prog1.UT8.ejercicios;
 
-import java.io.DataInputStream;
-import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
+
 
 public class NumerosReales {
 
@@ -13,13 +14,11 @@ public class NumerosReales {
 		double suma = 0, media = 0;
 		double contador = 0;
 
-		try (DataInputStream file = new DataInputStream (new FileInputStream(RUTA + "NumerosReales.txt"));) {
+		try (Scanner sc = new Scanner(new FileReader(RUTA + "NumerosReales.txt"));) {
 
-			boolean fileEnds = false;
+			while (sc.hasNext()) {
 
-			while (!fileEnds) {
-
-				int inputByte = file.read();
+				double inputByte = sc.nextDouble();
 				if (inputByte != -1) {
 					
 					suma += inputByte;
@@ -30,18 +29,14 @@ public class NumerosReales {
 					} else {
 						System.out.println("El archivo esta vacío");
 					}
-				} else {
-					fileEnds = true;
-				}
-
-			}
-			
+				} 
+			}	
 
 		} catch (IOException e) {
 			System.out.println("Error de E/S");
 			e.printStackTrace();
 
-		}
+		} 
 		
 		System.out.println("La suma es " + suma);
 		System.out.println("La media es " + media);
