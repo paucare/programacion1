@@ -1,4 +1,4 @@
-package dam.prog1.UT8.excepciones;
+package dam.prog1.UT8.excepciones.excepcionEdadNegativa;
 
 public class ExcepcionEdadNegativa extends Exception {
 	
