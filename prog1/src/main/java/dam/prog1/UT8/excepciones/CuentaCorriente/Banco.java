@@ -1,4 +1,4 @@
-package dam.prog1.UT8.excepciones.excepcionCuentaCorriente;
+package dam.prog1.UT8.excepciones.CuentaCorriente;
 
 public class Banco {
 

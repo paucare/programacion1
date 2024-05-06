@@ -1,4 +1,4 @@
-package dam.prog1.UT8.excepciones.excepcionEdadNegativa;
+package dam.prog1.UT8.excepciones.EdadNegativa;
 
 import java.util.Scanner;
 
