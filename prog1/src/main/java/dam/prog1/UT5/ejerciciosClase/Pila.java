@@ -71,7 +71,7 @@ public class Pila {
 	 
 			return null;
 		}
-		public Integer peak () {
+		public Integer peek () {
 			
 			if (!isEmpty()) {
 				return cima.getInfo();

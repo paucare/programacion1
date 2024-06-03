@@ -6,7 +6,7 @@ public class InitPila {
 		Pila pila = new Pila();
 		
 		pila.push(1);
-		Integer num= pila.peak();
+		Integer num= pila.peek();
 		System.out.println("El valor que esrá en la cima es " + num);
 		
 		boolean vacia;

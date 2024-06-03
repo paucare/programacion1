@@ -6,7 +6,7 @@ import java.util.Random;
 public class SumarMatriz {
 
 	public static void main(String[] args) {
-		
+
 		Scanner read = new Scanner(System.in);
 		System.out.println("Introduce el numero de filas:");
 		int filas = read.nextInt();
@@ -19,7 +19,7 @@ public class SumarMatriz {
 
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
-				matriz[i][j] = rand.nextInt(1) + 1;
+				matriz[i][j] = rand.nextInt(10) + 1;
 			}
 		}
 
@@ -42,10 +42,9 @@ public class SumarMatriz {
 
 	private static void mostrarSuma(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
-			System.out.print(i + " ");
+			System.out.println("Suma de fila " + i + ": " + arr[i]);
 
 		}
 
 	}
 }
-

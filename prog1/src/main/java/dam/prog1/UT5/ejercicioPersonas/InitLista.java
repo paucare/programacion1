@@ -9,17 +9,15 @@ public class InitLista {
 		Persona p1 = new Persona("Miquella", 20);
 		Persona p2 = new Persona("Malenia", 20);
 		Persona p3 = new Persona("Radagon", 50);
-		
-		System.out.println(lista.isEmpty());
-		System.out.println("La lista esta vacia");
+		Persona p4 = new Persona("Ranni",25);
 		
 		lista.insertAtBegin(p1);
 		lista.insertAtEnd(p2);
 		lista.insertAtEnd(p3);
+		lista.insertAtEnd(p4);
 		
-		System.out.println(lista.isEmpty());
-		System.out.println();
-		System.out.println("La lista no esta vacia");
+		boolean resultado = lista.isEmpty();
+		System.out.println("¿Esta vacía? " + resultado);
 		
 		System.out.println("Los elementos de la lista son: ");
 		lista.print();

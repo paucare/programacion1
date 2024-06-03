@@ -312,14 +312,14 @@ public class Lista implements ListaRepository {
 			return true;
 			
 		}else {
-		//Revisar esta parte del metodo me borra todos menos uno
+		//Revisar:  me borra todos menos el primero
 		Nodo aux = primero;
-		Nodo borrar= aux.getSig();
+		Nodo borrar;
 		
-		while(borrar!=null) {
-			borrar=borrar.getSig();
-			aux.setSig(null);
-			aux=borrar;
+		while(aux!=null) {
+			borrar=aux;
+			aux=aux.getSig();
+			borrar.setSig(null);
 			tam--;
 		}
 		

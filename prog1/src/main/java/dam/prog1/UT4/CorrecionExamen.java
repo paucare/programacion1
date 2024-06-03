@@ -163,7 +163,14 @@ public class CorrecionExamen {
 		
 		sc.close();
 	}
-
+/*
+ * Ejercicio EXTRA. 
+ * Se otorgará un punto extra con la conclusión de este punto que se evaluará siempre 
+ * y cuando el resto de los puntos estén resueltos. 
+ * Desarrolla un método llamado ejercicioExtra que reciba el array unidimensional devuelto por el ejercicio3
+ *  y devuelva otro array unidimiensional con los mismos elementos pero ordenados de menor a mayor. 
+ *  El array que se recibe por parámetros NO SE PUEDE MODIFICAR
+ */
 	private static int[] ejercicioExtra(int[] arr) {
 		System.out.println("Ejercicio 5");
 
