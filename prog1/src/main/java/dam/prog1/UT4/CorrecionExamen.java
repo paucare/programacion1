@@ -179,17 +179,21 @@ public class CorrecionExamen {
 		for (int i = 0; i < arr.length; i++) {
 			arrCopia[i] = arr[i];
 		}
+		//Ordenamos
 
 		int indiceActual = 0;
 		int[] arrayOrdenado = new int[arr.length];
+		
 		while (indiceActual < arrCopia.length) {
 			int indiceMenor = 0;
-
+			
 			for (int i = 1; i < arrCopia.length; i++) {
 				if (arrCopia[i] < arrCopia[indiceMenor]) {
 					indiceMenor = i;
 				}
 			}
+			
+			//Cambiamos los elementos.
 			
 			arrayOrdenado[indiceActual] = arrCopia[indiceMenor];
 			arrCopia[indiceMenor] = Integer.MAX_VALUE;

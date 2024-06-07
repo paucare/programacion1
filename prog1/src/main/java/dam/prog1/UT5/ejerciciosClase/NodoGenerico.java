@@ -18,11 +18,11 @@ public class NodoGenerico<T> {
 			this.info = info;
 		}
 	 
-		public NodoGenerico getSig() {
+		public NodoGenerico<T> getSig() {
 			return sig;
 		}
 	 
-		public void setSig(NodoGenerico sig) {
+		public void setSig(NodoGenerico<T> sig) {
 			this.sig = sig;
 		}
 	 

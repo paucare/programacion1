@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class EjercicioIterator {
 	public static void main(String[] args) {
 		
-		int n;
-		Integer numero; // auxiliar para avanzar en el arrayList con los valores que tiene;
+		//int n;
+		
 		Scanner sc = new Scanner(System.in);
 		
 		ArrayList<Integer> arrListEnteros = new ArrayList<>();
 		System.out.println("¿Cuantos elementos quieres en array?");
-		n=sc.nextInt();
+		//n=sc.nextInt();
 		for (int i=1;i <10;i++) {
 			arrListEnteros.add(i);
 		}
@@ -34,7 +34,8 @@ public class EjercicioIterator {
 	
 		//recorrido c Debe eliminar numeros pares
 		System.out.println("Recorro con iterator y no indicando el tipo de objeto");
-		Iterator<Integer> it = arrListEnteros.iterator();
+		Iterator it = arrListEnteros.iterator();
+		Integer numero; // auxiliar para avanzar en el arrayList con los valores que tiene;
 		while(it.hasNext()) {
 			numero = (Integer) it.next();
 			if(numero%2==0) {
