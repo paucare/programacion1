@@ -1,10 +1,10 @@
-package repaso.examen.UT8_UT9;
+package dam.prog1.UT9.repaso;
 
 import java.util.List;
 import java.util.Scanner;
 
-import repaso.examen.UT8_UT9.model.City;
-import repaso.examen.UT8_UT9.service.CityService;
+import dam.prog1.UT9.repaso.model.City;
+import dam.prog1.UT9.repaso.service.CityService;
 
 public class Init {
 

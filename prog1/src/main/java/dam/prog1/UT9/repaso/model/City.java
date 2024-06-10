@@ -1,4 +1,4 @@
-package repaso.examen.UT8_UT9.model;
+package dam.prog1.UT9.repaso.model;
 
 import java.util.Objects;
 

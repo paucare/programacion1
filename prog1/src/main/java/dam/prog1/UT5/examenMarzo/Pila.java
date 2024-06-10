@@ -8,6 +8,11 @@ public class Pila {
 	private Nodo cima;
 	private int tam;
 	
+	public Pila() {
+        this.cima = null;
+        this.tam = 0;
+	}
+	
 		
 	public boolean isEmpty() {
 		return tam==0;
@@ -20,15 +25,15 @@ public class Pila {
 	
 	//Insertar
 	
-	public void push(Integer info) {
+	public void push(Registro info) {
 		Nodo nuevo = new Nodo(info);
 		if(isEmpty()) {
 			cima = nuevo;
 		} else {
-			nuevo.setSig(nuevo);
+			nuevo.setSig(cima);
 			cima = nuevo;
-			tam++;
 		}
+		tam++;
 	}
 	//Extraer
 	public void pop() {
@@ -40,8 +45,8 @@ public class Pila {
 		}		
 	}
 	//Peek
-	public Integer peek() {
-		if(isEmpty()) {
+	public Registro peek() {
+		if(!isEmpty()) {
 		return cima.getInfo();
 		}
 		return null;
@@ -50,7 +55,7 @@ public class Pila {
 	//Imprimir
 	public void print() {
 		System.out.println("La pila contiene: ");
-		if(isEmpty()) {
+		if(!isEmpty()) {
 			
 			Nodo aux = cima;
 			System.out.println("......cima.....");

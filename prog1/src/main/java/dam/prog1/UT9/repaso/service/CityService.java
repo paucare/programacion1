@@ -1,9 +1,8 @@
-package repaso.examen.UT8_UT9.service;
+package dam.prog1.UT9.repaso.service;
 
 import java.util.List;
-
-import repaso.examen.UT8_UT9.model.City;
-import repaso.examen.UT8_UT9.repository.CityRepository;
+import dam.prog1.UT9.repaso.model.City;
+import dam.prog1.UT9.repaso.repository.CityRepository;
 
 
 public class CityService {

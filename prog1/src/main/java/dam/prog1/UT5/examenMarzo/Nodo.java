@@ -1,19 +1,19 @@
 package dam.prog1.UT5.examenMarzo;
 
 public class Nodo {
-	private Integer info;
+	private Registro info;
 	private Nodo sig;
 	
-	public Nodo(Integer info) {
+	public Nodo(Registro info) {
 		this.info = info;
 		this.sig = null;
 	}
 
-	public Integer getInfo() {
+	public Registro getInfo() {
 		return info;
 	}
 
-	public void setInfo(Integer info) {
+	public void setInfo(Registro info) {
 		this.info = info;
 	}
 
@@ -24,11 +24,5 @@ public class Nodo {
 	public void setSig(Nodo sig) {
 		this.sig = sig;
 	}
-
-	@Override
-	public String toString() {
-		return "Nodo [info=" + info + ", sig=" + sig + "]";
-	}
-
 	
 }

@@ -1,15 +1,15 @@
-package repaso.examen.UT8_UT9.repository;
+package dam.prog1.UT9.repaso.repository;
 
 import java.util.List;
 
-import repaso.examen.UT8_UT9.dao.city.CityDao;
-import repaso.examen.UT8_UT9.dao.city.CityDaoFiles;
-import repaso.examen.UT8_UT9.model.City;
+import dam.prog1.UT9.repaso.dao.city.*;
+import dam.prog1.UT9.repaso.model.City;
+
 
 public class CityRepository {
 	
 	private static CityRepository instance = null;
-	private CityDao dao;
+	private CityDaoFiles dao;
 	
 	public static synchronized CityRepository getInstance() {
 		if(instance==null) {

@@ -42,9 +42,9 @@ public class BDConnection {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("Could not close the connection");
-		} finally {
+		} /* finally {
 			instance=null;
-		}
+		}*/
 	}
 	
 

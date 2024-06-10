@@ -1,5 +1,7 @@
 package dam.prog1.UT5.listaGenericos;
 
+import dam.prog1.UT5.ejercicioPersonas.ListaRepository;
+
 public class ListaSimple implements ListaRepository {
 
 	private Nodo<T> primero;

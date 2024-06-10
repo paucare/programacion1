@@ -14,7 +14,7 @@ public class CityDaoMySQL implements CityDao {
 	
 	private final String SELECT_ALL="SELECT id,name,countryCode,district,population FROM city LIMIT 10;";
 	private final String SELECT_BY_ID="SELECT id,name,countryCode,district,population FROM city WHERE id=?;";
-	//Esta bd incrementa el id por si sola
+	//Esta bd incrementa el rid por si sola
 	private final String CREATE="INSERT INTO city(name,countryCode,district,population VALUES(?,?,?,?);";
 	private final String UPDATE="UPDATE city SET name=? countryCode=? district=? population=? WHERE id=?;";
 	private final String DELETE="DELETE FROM city WHERE ID=?;";
@@ -86,10 +86,10 @@ public class CityDaoMySQL implements CityDao {
 	public boolean create(City city) {
 		
 		boolean result=false;
-		System.out.println("Getting city...");
+		System.out.println("Creatinng city...");
 		Connection con = BDConnection.getInstance().getConnection();
 		if(con!=null) {
-			try (PreparedStatement stmt = con.prepareStatement(CREATE);){
+			try (PreparedStatement stmt = con.prepareStatement(CREATE);){ 
 				stmt.setString(1, city.getName());
 				stmt.setString(2, city.getCountryCode());
 				stmt.setString(3, city.getDistrict());
